@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Sqlite (Xerial) - pokedex.db" uuid="43584323-fb89-48ba-9843-6ff3ef3c0877">
+    <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
+    <schema name="" catalog=""/>
+    <table name="abilities" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="ability" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="descrip" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="megaevos" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="type" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="ability" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="stone" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="image" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="hp" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="attack" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="defense" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="sattack" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="sdefense" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="speed" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="total" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <primary-key columns="name"/>
+    </table>
+    <table name="pokedex" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="species" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="poketype" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="ability" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="hidability" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="egg" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="johto" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="hoenn" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="sinnoh" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="unova" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="kalos" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="mountkalos" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="coastkalos" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="evoline" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="mega" sqlType="BOOL" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="image" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="descrip" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="hp" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="attack" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="defense" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="sattack" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="sdefense" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="speed" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="total" sqlType="INT" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="typechartdef" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="normal" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="fighting" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="flying" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="poison" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="ground" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="rock" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="bug" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="ghost" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="steel" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="fire" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="water" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="grass" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="electric" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="psychic" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="ice" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="dragon" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="dark" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="fairy" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <primary-key columns="id"/>
+    </table>
+    <table name="typechartoff" schema="" catalog="" type="TABLE">
+      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="normal" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="fighting" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="flying" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="poison" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="ground" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="rock" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="bug" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="ghost" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="steel" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="fire" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="water" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="grass" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="electric" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="psychic" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="ice" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="dragon" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="dark" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <column name="fairy" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
+      <primary-key columns="id"/>
+    </table>
+  </data-source>
+</component>

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% set active_page = 'pokedex' %}
+{% block content %}
+    <div class="jumbotron">
+        <h1>The National Dex</h1>
+        <p>This list contains basic info (as well as links to more detailed entries) for the National Pokedex from
+            entry 1 - 251 (Bulbasaur to Celebi).</p>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>HP</th>
+                        <th>Attack</th>
+                        <th>Defense</th>
+                        <th>Sp. Attack</th>
+                        <th>Sp. Defense</th>
+                        <th>Speed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for d in dex %}
+                        <tr>
+                            <td>{{ d.id }}</td>
+                            <td><a href={{ url_for("dexEntry", name=d.name) }}>{{ d.name }}</a></td>
+                            <td>{{ d.poketype }}</td>
+                            <td>{{ d.hp }}</td>
+                            <td>{{ d.attack }}</td>
+                            <td>{{ d.defense }}</td>
+                            <td>{{ d.sattack }}</td>
+                            <td>{{ d.sdefense }}</td>
+                            <td>{{ d.speed }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1>Abilities</h1>
+        <p>A comprehensive list of all Pokemon Abilities and their effects</p>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Ability</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for a in abilities %}
+                        <tr id={{ a.ability.replace(" ", "") }}>
+                            <td>{{ a.id }}</td>
+                            <td>{{ a.ability }}</td>
+                            <td>{{ a.descrip }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

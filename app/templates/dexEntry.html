@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1">
+            <h1>
+                <a class="btn btn-default" href={{ url_for("dexEntry", name=navButtons.prev) }}>
+                    {{ navButtons.prev }}
+                </a>
+            </h1>
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+            <h1>
+                <span class="label label-primary">{{ pokemon.name }}</span>
+            </h1>
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+            <h1>
+                <a class="btn btn-default" href={{ url_for("dexEntry", name=navButtons.next) }}>
+                    {{ navButtons.next }}
+                </a>
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-1">
+            <img src="\static\images\{{ pokemon.image }}" class="img-thumbnail" id="biopic">
+        </div>
+        <div class="col-md-7">
+            <h1>
+                {{ pokemon.species }} Pokemon
+                <span class="label label-default">{{ pokemon.poketype }}</span>
+            </h1>
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="well">
+                        <p>{{ pokemon.descrip }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Abilities</h3>
+                        </div>
+                        <div class="panel-body">
+                            <a class="btn btn-primary" href={{ url_for("abilities", _anchor=abilities.ability1
+                            .replace(" ", "")) }}>{{ abilities.ability1 }}</a>
+                            {% if abilities.ability2 != none %}
+                                <a class="btn btn-primary" href={{ url_for("abilities",
+                                _anchor=abilities.ability2.replace(" ", "")) }}>{{ abilities.ability2 }}</a>
+                            {% endif %}
+                            {% if abilities.ability3 != none %}
+                                <a class="btn btn-primary" href={{ url_for("abilities",
+                                _anchor=abilities.ability3.replace(" ", "")) }}>{{ abilities.ability3 }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Stats</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h4>HP: {{ pokemon.hp }}</h4>
+                        </div>
+                        <div class="col-sm-10">
+                            <h4>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow={{ pokemon.hp }}
+                                            aria-valuemin="0" aria-valuemax="255"
+                                         style="width: {{ (pokemon.hp/255) * 100 }}%;">
+                                    </div>
+                                </div>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h4>Attack: {{ pokemon.attack }}</h4>
+                        </div>
+                        <div class="col-sm-10">
+                            <h4>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow={{ pokemon.attack }}
+                                            aria-valuemin="0" aria-valuemax="255"
+                                         style="width: {{ (pokemon.attack/255) * 100 }}%;">
+                                    </div>
+                                </div>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h4>Defense: {{ pokemon.defense }}</h4>
+                        </div>
+                        <div class="col-sm-10">
+                            <h4>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow={{ pokemon.defense }}
+                                            aria-valuemin="0" aria-valuemax="255"
+                                         style="width: {{ (pokemon.defense/255) * 100 }}%;">
+                                    </div>
+                                </div>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h4>Sp. Attack: {{ pokemon.sattack }}</h4>
+                        </div>
+                        <div class="col-sm-10">
+                            <h4>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow={{ pokemon.sattack }}
+                                            aria-valuemin="0" aria-valuemax="255"
+                                         style="width: {{ (pokemon.sattack/255) * 100 }}%;">
+                                    </div>
+                                </div>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h4>Sp. Defense: {{ pokemon.sdefense }}</h4>
+                        </div>
+                        <div class="col-sm-10">
+                            <h4>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow={{ pokemon.sdefense }}
+                                            aria-valuemin="0" aria-valuemax="255"
+                                         style="width: {{ (pokemon.sdefense/255) * 100 }}%;">
+                                    </div>
+                                </div>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <h4>Speed: {{ pokemon.speed }}</h4>
+                        </div>
+                        <div class="col-sm-10">
+                            <h4>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow={{ pokemon.speed }}
+                                            aria-valuemin="0" aria-valuemax="255"
+                                         style="width: {{ (pokemon.speed/255) * 100 }}%;">
+                                    </div>
+                                </div>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Evolutions</h3>
+                </div>
+                <div class="panel-body">
+                    {% if evoButtons == None %}
+                        <h5>Doesn't Evolve</h5>
+                    {% else %}
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a class="btn btn-default" href={{ url_for("dexEntry",
+                                name=evoButtons.evo0) }}>{{ evoButtons.evo0 }}</a>
+                            </div>
+                            <div class="col-sm-4">
+                                {% if multiEvoCheck == 1 %}
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                            Evos <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            {% for m in evoButtons.evo1 %}
+                                                <li><a href="{{ url_for("dexEntry", name=m.split(";")[1]) }}">{{ m }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% else %}
+                                    <a class="btn btn-default" href={{ url_for("dexEntry",
+                                        name=evoButtons.evo1.split(";")[1]) }}>{{ evoButtons.evo1 }}</a>
+                                {% endif %}
+                            </div>
+                            <div class="col-sm-4">
+                                {% if threeEvos %}
+                                    {% if multiEvoCheck == 2 %}
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                Evos <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                {% for m in evoButtons.evo2 %}
+                                                    <li><a href="{{ url_for("dexEntry", name=m.split(";")[1]) }}">{{ m }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    {% else %}
+                                        <a class="btn btn-default" href={{ url_for("dexEntry",
+                                        name=evoButtons.evo2.split(";")[1]) }}>{{ evoButtons.evo2 }}</a>
+                                    {% endif %}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Mega Evolution
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    {% if pokemon.mega%}
+                        {% for m in megaEvoButtons.values() %}
+                            <a class="btn btn-default" href={{ url_for("megaDexEntry", name=m) }}>{{ m }}</a>
+                        {% endfor %}
+                    {% else %}
+                        <h5>Doesn't Mega Evolve</h5>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
