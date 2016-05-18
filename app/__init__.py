@@ -4,11 +4,7 @@ import os
 
 app = Flask(__name__)
 
-if os.environ.get('DATABASE_URL') is None:
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pokedex.db'
-else:
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pokedex.db']
 db = SQLAlchemy(app)
 
 from app import views, models
